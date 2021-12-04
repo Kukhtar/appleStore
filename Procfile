@@ -1,2 +1,2 @@
-web: java -jar target/aplleStore-0.0.1-SNAPSHOT.jar $JAVA_OPTS -Dserver.port=$PORT
+web: java -jar -Dserver.port=$PORT target/aplleStore-0.0.1-SNAPSHOT.jar
 
