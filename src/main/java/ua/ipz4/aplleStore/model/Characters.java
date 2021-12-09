@@ -15,7 +15,7 @@ import javax.persistence.Id;
 @Entity
 class Characters {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String screen;
     private String processor;

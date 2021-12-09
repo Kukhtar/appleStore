@@ -11,19 +11,11 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @Entity
-public class Product {
+public class Card {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private Double price;
-    private Long authorId;
-    private String[] photoList;
-    @ManyToOne
-    @JoinColumn(name="card_id", nullable=true)
-    private Card card;
-    @OneToOne(cascade=CascadeType.ALL)
-    private Characters characters;
 
-
+    @OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL, mappedBy = "card")
+    List<Product> products;
 }
