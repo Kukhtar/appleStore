@@ -13,7 +13,7 @@ import java.util.List;
 @Entity
 public class Card {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL, mappedBy = "card")
